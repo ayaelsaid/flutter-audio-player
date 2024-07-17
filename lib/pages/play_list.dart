@@ -1,6 +1,6 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/songwidget.dart';
+import 'package:flutter_application_1/widget/songwidget.dart';
 
 class PlaylistPage extends StatefulWidget {
   final Playlist playlist;
