@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class SongWidget extends StatefulWidget {
   final Audio audio;
+
   const SongWidget({required this.audio, super.key});
 
   @override
@@ -52,7 +53,9 @@ class _SongWidgetState extends State<SongWidget> {
       ),
       title: Text(widget.audio.metas.title ?? 'No title'),
       subtitle: Text(widget.audio.metas.artist ?? 'No artist'),
+
       onTap: () async {
+
         if (!assetsAudioPlayer.isPlaying.value) {
           await assetsAudioPlayer.open(
             widget.audio,
@@ -60,10 +63,10 @@ class _SongWidgetState extends State<SongWidget> {
           );
         } else {
           await assetsAudioPlayer.stop();
-          await assetsAudioPlayer.open(
-            widget.audio,
-            autoStart: true,
-          );
+          // await assetsAudioPlayer.open(
+          //   widget.audio,
+          //   autoStart: true,
+          // );
         }
       },
     );

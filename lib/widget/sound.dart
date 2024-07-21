@@ -1,6 +1,8 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
+
+
 class SoundPlayerWidget extends StatefulWidget {
   final Playlist playlist;
 
@@ -93,15 +95,6 @@ class _SoundPlayerWidgetState extends State<SoundPlayerWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: const Center(
-          child: Text(
-            'Music Player',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-      ),
       body: Center(
         child: StreamBuilder<RealtimePlayingInfos>(
           stream: assetsAudioPlayer.realtimePlayingInfos,
