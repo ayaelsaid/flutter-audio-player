@@ -49,8 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         actions: [
-           
-            IconButton(
+          IconButton(
             onPressed: () {
               Navigator.push(
                 context,
@@ -65,10 +64,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-
       body: SoundPlayerWidget(
         playlist: playlistEx,
       ),
     );
   }
 }
+
